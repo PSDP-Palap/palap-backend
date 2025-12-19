@@ -1,0 +1,31 @@
+definitions:
+  models.Error:
+    properties:
+      error:
+        type: string
+    type: object
+  models.Service:
+    properties:
+      id:
+        type: integer
+      title:
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /api/v1/service:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Service'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.Error'
+      summary: Get all service
+swagger: "2.0"
