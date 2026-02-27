@@ -7,7 +7,7 @@ import (
 )
 
 func InitializeSupabase() *supabase.Client {
-	client, err := supabase.NewClient("", "", &supabase.ClientOptions{})
+	client, err := supabase.NewClient("https://wexlbxkxfduncbbzbyam.supabase.co", "sb_publishable_rpvjaCWmgOf_BWAYsMhwuQ_9nKcMZra", &supabase.ClientOptions{})
 
 	if err != nil {
 		log.Printf("Failed to initailize the client: %v", err)
