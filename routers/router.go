@@ -16,10 +16,11 @@ func InitializeRouter() *gin.Engine {
 	apiV1.Use()
 	{
 		apiV1.GET("/service", v1.GetServices)
-		apiV1.GET("/service/:id", v1.GetService)
-		apiV1.POST("/service", v1.CreateBook)
-		apiV1.PUT("/service/:id", v1.UpdateService)
-		apiV1.DELETE("/service/:id", v1.DeleteService)
+		// apiV1.GET("/service", v1.GetServices)
+		// apiV1.GET("/service/:id", v1.GetService)
+		// apiV1.POST("/service", v1.CreateBook)
+		// apiV1.PUT("/service/:id", v1.UpdateService)
+		// apiV1.DELETE("/service/:id", v1.DeleteService)
 	}
 
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerfiles.Handler))
